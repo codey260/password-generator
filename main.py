@@ -18,11 +18,10 @@ password_chars = (
 )
 
 # Asking the user for the password length
-passowrd_length = int(input("How long should the password be? > "))
-
+# passowrd_length = int(input("How long should the password be? > "))
 
 all_symbols = letters + numbers + symbols
-remaining_chars = passowrd_length - len(password_chars)
+remaining_chars = len(password_chars) - (letters_length + numbers_length + symbols_length)
 
 # Conecatinating Characters with the password_chars
 password_chars += [random.choice(all_symbols) for _ in range(max(remaining_chars, 0))]
